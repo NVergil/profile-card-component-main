@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* ### Neutral */
+  --white: rgba(255, 255, 255);
+  --dark-gray: hsl(0, 0%, 59%);
+
+  /* ## Typography */
+
+  /* ### Body Copy */
+  /* (name and stats) */
+  --size: 18px;
+
+  /* ### Font */
+  /* - Weights: 400, 700 */
+
+  --font-kumbh: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  min-height: 100vh;
+  background: var(--dark-cyan);
+  font-family: var(--font-kumbh);
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+
+.background-container {
+  position: relative;
+}
+
+.pattern-top {
+  position: absolute;
+  width: 1600px;
+  top: -70rem;
+  right: 55%;
+}
+
+.pattern-bottom {
+  position: absolute;
+  width: 1250px;
+  top: 10rem;
+  left: 30%;
+ }
+
+.container {
+  background: var(--white);
+  border-radius: 1rem;
+  max-width: 375px;
+  width: 100%;
+  transform: translate(0);
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding-top: 4.3rem;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.content img {
+  position: absolute;
+  z-index: 2;
+  top: -0.2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 0.4rem solid var(--white);
+}
+
+.content h1,
+h2 {
+  font-size: var(--size);
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+span {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.country {
+  font-size: 0.9rem;
+  color: var(--dark-grayish-blue);
+  margin: 0.5rem 0 1.4rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  padding: 1.4rem 0;
+  width: 100%;
+  justify-content: space-evenly;
+  border-top: 1px solid hsl(240, 5%, 91%);
+}
+
+.stats p {
+  font-size: 11px;
+  color: var(--dark-gray);
+  letter-spacing: 1px;
+  margin-top: 0.2rem;
+}
+
+.attribution {
+  /* Este atributo de transform me trae todo hacia arriba, actua como un z-index
+  No se porque la verdad */
+  transform: translate(0);
+  font-size: 14px;
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+  margin-top: 5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
